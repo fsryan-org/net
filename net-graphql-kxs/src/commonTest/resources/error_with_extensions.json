@@ -1,0 +1,20 @@
+{
+  "message": "Error fetching product): Service API Failed",
+  "locations": [
+    {
+      "line": 1,
+      "column": 624
+    }
+  ],
+  "path": [
+    "product"
+  ],
+  "extensions": {
+    "operation_id": "a5a6223f",
+    "requestId": "ae068a8e-01e2-488d-88e0-7c90c768c344",
+    "data": "HTTP 1102: BARCODE_UNKNOWN, Unknown barcode., The barcode supplied was not found. Barcode: 00001015128945",
+    "desc": "Service API Failed",
+    "errorCode": 2100,
+    "title": "Error"
+  }
+}

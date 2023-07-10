@@ -12,6 +12,9 @@ object Deps {
             object FSRyan {
                 const val logging = "0.4.2"
             }
+            object Goncalossilva {
+                const val resources = "0.3.2"
+            }
             object JakeWharton {
                 const val mosaic = "0.7.0"
             }
@@ -40,13 +43,20 @@ object Deps {
                 const val uuid = "0.7.0"
             }
             object FSRyan {
-                const val types = "0.0.1-build.3"
+                const val types = "0.0.1-build.4"
             }
             object IonSpin {
                 const val bigNum = "0.3.8"
             }
             object JetBrains {
                 const val datetime = "0.4.0"
+                const val kxSerialization = "1.5.1"
+            }
+            object Ktor {
+                const val ktor = "2.3.2"
+            }
+            object Square {
+                const val okHttp3 = "4.11.0"
             }
         }
         object Plugin {
@@ -55,10 +65,7 @@ object Deps {
             }
             object FSRyan {
                 const val cicd = "0.0.2-build.3"
-                const val module = "0.0.1-build.0"
-            }
-            object Goncalossilva {
-                const val resources = "0.3.2"
+                const val module = "0.0.1-build.1"
             }
             object Google {
                 const val ksp = "${Global.JetBrains.kotlin}-1.0.11"
@@ -119,7 +126,6 @@ object Deps {
         object FSRyan {
             private val globalVersion = Versions.Global.FSRyan
             private val version = Versions.Main.FSRyan
-            const val types = "com.fsryan.util:types:${version.types}"
             const val logging = "com.fsryan.tools:logging:${globalVersion.logging}"
             const val loggingAndroid = "com.fsryan.tools:logging-android:${globalVersion.logging}"
             const val loggingAndroidDebug = "com.fsryan.tools:logging-android-debug:${globalVersion.logging}"
@@ -133,12 +139,22 @@ object Deps {
             private val globalVersion = Versions.Global.JetBrains
             const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${globalVersion.coroutines}"
             const val datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${version.datetime}"
-            const val kotlinSTDLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${globalVersion.kotlin}"
+            const val kxSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:${version.kxSerialization}"
         }
         object Koin {
             private val version = Versions.Global.Koin
             const val android = "io.insert-koin:koin-android:${version.core}"
             const val core = "io.insert-koin:koin-core:${version.core}"
+        }
+        object Ktor {
+            private val version = Versions.Main.Ktor
+            const val clientCore = "io.ktor:ktor-client-core:${version.ktor}"
+            const val clientContentNegotiation = "io.ktor:ktor-client-content-negotiation:${version.ktor}"
+            const val clientDarwin = "io.ktor:ktor-client-darwin:${version.ktor}"
+            const val clientLogging = "io.ktor:ktor-client-logging:${version.ktor}"
+            const val clientOkHttp = "io.ktor:ktor-client-okhttp:${version.ktor}"
+            const val clientJS = "io.ktor:ktor-client-js:${version.ktor}"
+            const val serializationKotlinxJson = "io.ktor:ktor-serialization-kotlinx-json:${version.ktor}"
         }
     }
     object Plugin {
@@ -195,6 +211,10 @@ object Deps {
              * multiplatform and work on kotlin-test as well.
              */
             const val junit4JvmTools = "com.fsryan.testtools.jvm:junit4jvmtools:${version.testtools}"
+        }
+        object Goncalossilva {
+            private val globalVersion = Versions.Global.Goncalossilva
+            const val resources = "com.goncalossilva:resources:${globalVersion.resources}"
         }
         object JetBrains {
             private val version = Versions.Global.JetBrains

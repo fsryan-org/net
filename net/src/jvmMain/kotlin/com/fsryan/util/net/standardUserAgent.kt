@@ -1,6 +1,6 @@
 package com.fsryan.util.net
 
-actual internal fun createStandardUserAgent(appName: String, appVersionName: String): String {
+internal actual fun createStandardUserAgent(appName: String, appVersionName: String): String {
     val osName = System.getProperty("os.name")
     val osVersion = System.getProperty("os.version")
     val osArch= System.getProperty("os.arch")

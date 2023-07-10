@@ -35,7 +35,7 @@ open class FSNetApiException(
  * `Authorization` header is not populated, incorrectly formatted, or the
  * token has a mismatched signature or is expired.
  */
-open class FSApiUnauthorizedException(
+class FSApiUnauthorizedException(
     response: FSApiErrorsResponse? = null,
     message: String? = null,
     cause: Throwable? = null
@@ -46,7 +46,7 @@ open class FSApiUnauthorizedException(
  * allowed to access a particular resource, but _IS_ logged in and _IS_ allowed
  * to know of the existence of the resource.
  */
-open class FSApiForbiddenException(
+class FSApiForbiddenException(
     response: FSApiErrorsResponse? = null,
     message: String? = null,
     cause: Throwable? = null
@@ -59,7 +59,7 @@ open class FSApiForbiddenException(
  * that the logged-in user is not authorized to know of the existence of the
  * resource.
  */
-open class FSApiNotFoundException(
+class FSApiNotFoundException(
     response: FSApiErrorsResponse? = null,
     message: String? = null,
     cause: Throwable? = null

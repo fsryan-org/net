@@ -21,14 +21,25 @@ version = plugins.findPlugin(FSRyanCICDPlugin::class)?.branchSpecificVersionName
 
 kotlin {
 
+//    targets.findByName("jvm")?.apply {
+//        compilations["test"].compilerOptions.configure {
+//            println("adding -Xcommon-sources to free compiler args for test compilation")
+//            freeCompilerArgs.add("-Xcommon-sources")
+//        }
+//    }
+
     sourceSets {
         maybeCreate("commonMain").apply {
             dependencies {
                 with(Deps.Main.FSRyan) {
-                    api(types)
+                    api(fsUtil("types", Versions.Main.FSRyan.types))
                 }
             }
         }
+
+//        maybeCreate("jvmTest").apply {
+//            dependsOn(maybeCreate("jvmMain"))
+//        }
     }
 }
 

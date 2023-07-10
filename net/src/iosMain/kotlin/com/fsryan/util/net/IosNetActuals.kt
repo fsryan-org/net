@@ -11,7 +11,7 @@ import platform.UIKit.UIDevice
 import platform.posix.uname
 import platform.posix.utsname
 
-actual internal fun createStandardUserAgent(appName: String, appVersionName: String): String {
+internal actual fun createStandardUserAgent(appName: String, appVersionName: String): String {
     val deviceVersion = "${UIDevice.currentDevice.systemName}/${UIDevice.currentDevice.systemVersion}"
     val dictionary = NSBundle.bundleWithIdentifier("com.apple.CFNetwork")?.infoDictionary
     val cfNetworkVerisonCode = dictionary?.get("CFBundleShortVersionString") as? String
