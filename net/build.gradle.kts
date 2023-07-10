@@ -21,14 +21,13 @@ version = plugins.findPlugin(FSRyanCICDPlugin::class)?.branchSpecificVersionName
 
 kotlin {
 
-    sharedAndroidJvmTestDependencies {
-        with(Deps.Test.FSRyan) {
-            implementation(junit4JvmTools)
-        }
-        with(Deps.Test.JUnit) {
-            implementation(api)
-            implementation(params)
-            runtimeOnly(engine)
+    sourceSets {
+        maybeCreate("commonMain").apply {
+            dependencies {
+                with(Deps.Main.FSRyan) {
+                    api(types)
+                }
+            }
         }
     }
 }

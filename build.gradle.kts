@@ -59,4 +59,28 @@ allprojects {
             documentedVisibilities.set(listOf(Visibility.PUBLIC, Visibility.INTERNAL))
         }
     }
+    repositories {
+        val props = fsryan.BuildProperties
+        val awsAccessKey = props.prop(this@allprojects, propName = "com.fsryan.aws_access_key", envVarName = "AWS_ACCESS_KEY")
+        val awsSecretKey = props.prop(this@allprojects, propName = "com.fsryan.aws_secret_key", envVarName = "AWS_SECRET_KEY")
+        if (hasProperty("fsryan.includeMavenLocal")) {
+            mavenLocal()
+        }
+        maven {
+            url = uri("s3://fsryan-maven-repo/release")
+            credentials(AwsCredentials::class) {
+                accessKey = awsAccessKey
+                secretKey = awsSecretKey
+            }
+        }
+        maven {
+            url = uri("s3://fsryan-maven-repo/snapshot")
+            credentials(AwsCredentials::class) {
+                accessKey = awsAccessKey
+                secretKey = awsSecretKey
+            }
+        }
+        mavenCentral()
+        google()
+    }
 }
