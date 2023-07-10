@@ -42,6 +42,17 @@ buildscript {
             classpath(cicd)
             classpath(module)
         }
+        // I noticed that uploads to AWS were very slow, and that I got this
+        // log message:
+        // JAXB is unavailable. Will fallback to SDK implementation which may be less performant.If you are using Java 9+, you will need to include javax.xml.bind:jaxb-api as a dependency.
+        // See: https://github.com/seek-oss/gradle-aws-plugin/issues/15
+        // It appears this is necessary to speed up the aws uploads. This is
+        // because Java 9+ does not include this library. See:
+        // https://stackoverflow.com/questions/43574426/jaxb-api-jar-not-on-classpath
+         classpath("javax.xml.bind:jaxb-api:2.3.1")
+        // If this doesn't help, try:
+//        classpath("org.glassfish.jaxb:jakarta.xml.bind-api:2.3.2")
+//        classpath("jakarta.xml.bind:jaxb-runtime:2.3.2")
     }
 }
 
