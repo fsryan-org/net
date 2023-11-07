@@ -8,7 +8,7 @@ import fsryan.Deps.Versions
 
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization")
+    kotlin("plugin.serialization") version fsryan.Deps.Versions.Plugin.JetBrains.kxs
     id("com.android.library")
     id("org.jetbrains.kotlinx.kover")
     id("com.goncalossilva.resources") version fsryan.Deps.Versions.Global.Goncalossilva.resources

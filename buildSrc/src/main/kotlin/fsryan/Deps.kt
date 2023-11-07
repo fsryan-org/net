@@ -13,15 +13,16 @@ object Deps {
                 const val logging = "0.4.2"
             }
             object Goncalossilva {
-                const val resources = "0.3.2"
+                const val resources = "0.4.0"
             }
             object JakeWharton {
-                const val mosaic = "0.7.0"
+                const val mosaic = "0.9.1"
             }
             object JetBrains {
                 const val coroutines = "1.7.1"
-                const val compose = "1.4.1"
-                const val kotlin = "1.8.20"
+                const val compose = "1.5.10"
+                const val dokka = "1.9.10"
+                const val kotlin = "1.9.20"
             }
             object Koin {
                 const val core = "3.4.0"
@@ -40,20 +41,20 @@ object Deps {
                 const val appCompat = "1.6.1"
             }
             object BenAsher44 {
-                const val uuid = "0.7.0"
+                const val uuid = "0.8.1"
             }
             object FSRyan {
-                const val types = "0.0.1-build.4"
+                const val types = "0.0.1-build.5"
             }
             object IonSpin {
                 const val bigNum = "0.3.8"
             }
             object JetBrains {
-                const val datetime = "0.4.0"
-                const val kxSerialization = "1.5.1"
+                const val datetime = "0.4.1"
+                const val kxSerialization = "1.6.0"
             }
             object Ktor {
-                const val ktor = "2.3.2"
+                const val ktor = "2.3.5"
             }
             object Square {
                 const val okHttp3 = "4.11.0"
@@ -64,14 +65,15 @@ object Deps {
                 const val plugin = "7.4.2"
             }
             object FSRyan {
-                const val cicd = "0.0.2-build.3"
-                const val module = "0.0.1-build.1"
+                const val cicd = "0.0.2-build.4"
+                const val module = "0.0.1-build.3"
             }
             object Google {
-                const val ksp = "${Global.JetBrains.kotlin}-1.0.11"
+                const val ksp = "${Global.JetBrains.kotlin}-1.0.14"
             }
             object JetBrains {
-                const val kover = "0.7.2"
+                const val kover = "0.7.4"
+                const val kxs = "1.9.0"
             }
             object JohnRengelman {
                 const val shadow = "8.1.1"
