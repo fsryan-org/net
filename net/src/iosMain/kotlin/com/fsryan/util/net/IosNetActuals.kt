@@ -1,5 +1,6 @@
 package com.fsryan.util.net
 
+import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
 import kotlinx.cinterop.ptr
@@ -11,6 +12,7 @@ import platform.UIKit.UIDevice
 import platform.posix.uname
 import platform.posix.utsname
 
+@OptIn(ExperimentalForeignApi::class)
 internal actual fun createStandardUserAgent(appName: String, appVersionName: String): String {
     val deviceVersion = "${UIDevice.currentDevice.systemName}/${UIDevice.currentDevice.systemVersion}"
     val dictionary = NSBundle.bundleWithIdentifier("com.apple.CFNetwork")?.infoDictionary
